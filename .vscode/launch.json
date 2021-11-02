@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}\\LeetCode Problems\\reverseInteger.js"
+            "program": "${workspaceFolder}\\LeetCode Problems\\generatePerenthesis.js"
         }
     ]
 }

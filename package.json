@@ -4,8 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "loadtest1":"loadtest -n 10 -c 10 http://localhost:3000/one",
+    "loadtest2":"loadtest -n 10 -c 10 http://localhost:3000/two",
+    "loadtest3":"loadtest -n 10 -c 10 http://localhost:3000/three"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "express": "^4.17.1",
+    "loadtest": "^5.1.2"
+  }
 }
