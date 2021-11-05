@@ -1,0 +1,70 @@
+{
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
+    "terminal.integrated.shellArgs.windows": [],
+    "editor.formatOnSave": true,
+    
+    "[javascript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.fontLigatures": true,
+  "editor.fontFamily": "'Fira Code iScript', Consolas, 'Courier New', monospace",
+    "editor.tokenColorCustomizations": {
+  "textMateRules": [
+    {
+      "scope": [
+       
+        "comment",
+        "entity.name.type.class", 
+        "keyword", 
+        "constant", 
+        "storage.modifier", 
+        "storage.type.class.js" 
+      ],
+      "settings": {
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "scope": [
+       
+        "invalid",
+        "keyword.operator",
+        "constant.numeric.css",
+        "keyword.other.unit.px.css",
+        "constant.numeric.decimal.js",
+        "constant.numeric.json"
+      ],
+      "settings": {
+        "fontStyle": ""
+      }
+    }
+  ]
+},
+"launch": {
+
+  "configurations": [],
+  "compounds": []
+},
+"editor.formatOnPaste": true,
+"json.schemas": [
+
+],
+"git.autofetch": true,
+"[jsonc]": {
+
+  
+
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "editor.suggest.insertMode": "replace"
+},
+"[html]": {
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+},
+"terminal.integrated.defaultProfile.windows": "Git Bash"
+}
