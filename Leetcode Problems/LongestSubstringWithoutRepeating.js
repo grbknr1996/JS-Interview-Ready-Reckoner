@@ -8,6 +8,7 @@ const longestSubsetWithoutRepeating = (s) => {
       console.log(result);
     } else {
       i = result.get(letters[i]);
+      console.log("i=", i);
       result.clear();
     }
     if (maxLen < result.size) {
@@ -17,3 +18,9 @@ const longestSubsetWithoutRepeating = (s) => {
   return maxLen;
 };
 console.log(longestSubsetWithoutRepeating("wpwkew"));
+
+const sliding = (s) => {
+  var letters = s.split("");
+  var maxLen = 0;
+  for (let i = 0; i < s.length; i++) {}
+};

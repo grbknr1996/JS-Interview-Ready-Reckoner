@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}\\LeetCode Problems\\threeSum.js"
+            "program": "${workspaceFolder}\\LeetCode Problems\\maxStockProfit.js"
         }
     ]
 }
