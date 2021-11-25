@@ -19,8 +19,8 @@ const longestSubsetWithoutRepeating = (s) => {
 };
 console.log(longestSubsetWithoutRepeating("wpwkew"));
 
-const sliding = (s) => {
-  var letters = s.split("");
-  var maxLen = 0;
-  for (let i = 0; i < s.length; i++) {}
-};
+// const sliding = (s) => {
+//   var letters = s.split("");
+//   var maxLen = 0;
+//   for (let i = 0; i < letters.length; i++) {}
+// };

@@ -38,14 +38,39 @@ Constraints:
  * @param {number[]} nums
  * @return {number}
  */
-const rob = (nums) => {};
+const rob = (nums) => {
+  if (!nums.length) return 0;
+  if (nums.length === 1) return nums[0];
+  if (nums.length === 2) return Math.max(nums[0], nums[1]);
+
+  for (let i = 2; i < nums.length; i++) {
+    nums[i] = Math.max(nums[i - 2] + nums[i], (nums[i - 3] || 0) + nums[i]);
+  }
+  return Math.max(nums[nums.length - 1], nums[nums.length - 2]);
+};
 
 console.log(rob([2, 7, 9, 3, 1]));
 
 /*
+
 1   2   3   4   5   6
 1$  2$  8$  5$  8$  11$
 
 1 ==>3==>5 =17
 2 ==>4==>6 =18
 */
+
+var containsDuplicate = function (nums) {
+  let soln = [];
+  let f = false;
+  for (let el of nums) {
+    if (!soln.includes(el)) {
+      soln.push(el);
+    } else {
+      f = true;
+      return f;
+    }
+  }
+  return f;
+};
+console.log(containsDuplicate([1, 2, 3, 1]));
