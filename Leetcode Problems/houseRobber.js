@@ -58,6 +58,7 @@ console.log(rob([2, 7, 9, 3, 1]));
 
 1 ==>3==>5 =17
 2 ==>4==>6 =18
+
 */
 
 var containsDuplicate = function (nums) {
