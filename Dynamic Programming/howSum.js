@@ -14,24 +14,27 @@ howSum(7,[4,3,1,4])
 howSum(7,[5,3,4,7])
 
                         7
-        -5    / -3 /     -4 \   -7 \
-            2    4           3      0
-                /  \         |         
+        (-5) / (-3)/     (-4)\   (-7) \
+            2     4          3         0
+            (-3)/  \ (-4)    |         
                1    0        0
                     
 
 */
+//n-numbers.length of array
+//m-target sum
 const howSum = (targetSum, numbers, memo = {}) => {
   if (targetSum in memo) return memo[targetSum];
   if (targetSum === 0) return [];
   if (targetSum < 0) return null;
 
   for (let num of numbers) {
+    //--------->n times
     const remainder = targetSum - num;
-    const remainderResult = howSum(remainder, numbers, memo);
+    const remainderResult = howSum(remainder, numbers, memo); //-------->m times
     if (remainderResult !== null) {
       memo[targetSum] = [...remainderResult, num];
-      return [...remainderResult, num];
+      return [...remainderResult, num]; //worst case will be the bunch of one's m times
     }
   }
   memo[targetSum] = null;
@@ -47,5 +50,5 @@ console.log(howSum(300, [7, 14]));
 //time: O(n^m*m)
 //space: o(m)
 //memoized
-
-//Memoized
+//time:O(n*m*m)
+//space:O(m*m) m-size of returning array and sixe of memo
