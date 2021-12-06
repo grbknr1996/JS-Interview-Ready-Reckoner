@@ -63,3 +63,47 @@ console.log(gridTraveler(18, 18));
     -add a base case and return values
     -store return values  into the memo
  */
+
+/*
+time:O(m*n)
+space:O(m*n)
+gridTraveller(3,3)->
+||
+\/
+Araay(4*4)
+
+*/
+const gridTravellerTabulation = (m, n) => {
+  const table = Array(m + 1)
+    .fill()
+    .map(() => Array(n + 1).fill(0));
+
+  table[1][1] = 1;
+
+  for (let i = 0; i <= m; i++) {
+    for (let j = 0; j <= n; j++) {
+      const current = table[i][j];
+      if (j + 1 <= n) table[i][j + 1] += current;
+      if (i + 1 <= m) table[i + 1][j] += current;
+    }
+  }
+  console.log(table);
+  return table[m][n];
+};
+
+console.log(gridTravellerTabulation(3, 3));
+/*
+Tabulation Receipe:
+
+1.Visualize the  problem as a table 
+
+2.size the ttble based on inputs
+
+3.initialize the table with default values
+
+4.seed the trivial answer into the table
+
+5.iterate through the the table 
+
+6.fill further positions based on the current position
+*/

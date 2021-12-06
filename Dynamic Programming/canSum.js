@@ -84,3 +84,20 @@ console.log(canSumWithMemoization(300, [7, 14]));
 Time :O(m*n)
 space:O(m)
 */
+
+//Tabulation
+
+const canSumTabulation = (targetSum, nums) => {
+  const table = Array(targetSum + 1).fill(false);
+
+  table[0] = true;
+  for (let i = 0; i <= targetSum; i++) {
+    if (table[i] === true) {
+      for (let num of nums) {
+        table[i + num] = true;
+      }
+    }
+  }
+  return table[targetSum];
+};
+console.log(canSumTabulation(7, [5, 3, 4]));

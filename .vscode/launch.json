@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}\\Dynamic Programming\\countCoins.js"
+            "program": "${workspaceFolder}\\Leetcode Problems\\removeChars.js"
         }
     ]
 }
