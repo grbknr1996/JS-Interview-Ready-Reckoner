@@ -45,6 +45,13 @@ Register --->Install ----->Activate
 Message events and functional Events such as 
 "fetch" and "sync"
 
+
+Service workers are a proxy between the browser and 
+the network. By intercepting requests made by the document, 
+service workers can redirect requests to a cache, 
+enabling offline access. 
+Web workers are general-purpose scripts that enable us to 
+offload processor-intensive work from the main thread.
              */
 
 const cacheName = "v1";
