@@ -22,6 +22,10 @@ Promise.all([promise1, promise2, promise3]).then((values) => {
 
 #### Promise.allSettled will never reject -it will resolve once all Promises in the array have either rejected or resolved.
 
+#### Using Promise.race() to implement multiple promises
+
+#### The race method is another way the promise object allows you to work with multiple promises. The Promise.race() method returns a promise that fulfills or rejects #### as soon as one of the promises in an iterable array is fulfilled or rejected. This array of promises is passed as an argument to the method.
+
 ```js
 Promise.all([Promise.reject(1), Promise.resolve(2)])
 .catch((err) => {
