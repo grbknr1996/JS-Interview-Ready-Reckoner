@@ -24,3 +24,4 @@ console.log(longestSubsetWithoutRepeating("wpwkew"));
 //   var maxLen = 0;
 //   for (let i = 0; i < letters.length; i++) {}
 // };
+//For “ABDEFGABEF”, the longest substring are “BDEFGA” and “DEFGAB”, with length 6

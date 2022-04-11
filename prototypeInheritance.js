@@ -32,7 +32,11 @@ function fun() {}
 console.log(fun.__proto__.mybind());
 // - What is Prototype?
 // - What is Prototypal Inheritance?
+//-soln-The Prototypal Inheritance is a feature in javascript used to add methods and properties in objects.
 // - What is Prototype Chain?
+//soln-When it comes to inheritance, JavaScript only has one construct: objects. Each object has a private property which holds a link to another object called its prototype. That prototype object has a prototype of its own, and so on until an object is reached with null as its prototype.
+//By definition, null has no prototype, and acts as the final link in this prototype chain
+
 // - Why we call it __proto__ ?
 // - What is inhertance in Javascript?
 
@@ -67,6 +71,29 @@ let pockets = {
   __proto__: bed,
 };
 
-alert(pockets.pen); // 3
-alert(bed.glasses); // 1
-alert(table.money); // undefined
+//alert(pockets.pen); // 3
+//alert(bed.glasses); // 1
+//alert(table.money); // undefined
+
+console.log("\nFunctional Prototype\n");
+
+function add(a, b) {
+  this.a = a;
+  this.b = b;
+  console.log(this.a + this.b);
+}
+
+add.prototype.assignA = function (a) {
+  this.a = a;
+  console.log(this.a + this.b);
+};
+
+add.prototype.assignB = (b) => {
+  this.b = b;
+
+  console.log(this.a + this.b);
+};
+
+const a = new add(10, 10); //20
+a.assignA(20); //30
+a.assignB(30); //undefined
