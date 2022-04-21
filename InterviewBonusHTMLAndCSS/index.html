@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Untitled</title>
+    <meta
+      name="description"
+      content="This is an example of a meta description."
+    />
+  </head>
+
+  <body>
+    <!-- Drawing a circle inside a square using  -->
+
+    <div class="square">
+      <div class="circle"></div>
+    </div>
+
+    <div class="triangle"></div>
+
+    <div class="center-flex">This text is centered</div>
+    <br />
+    <br />
+    <hr />
+    <br />
+    <br />
+    <div class="grid">
+      <p>Geeks for Geeks</p>
+    </div>
+    <br />
+    <br />
+    <hr />
+    <br />
+    <br />
+    <p>Select a maintenance drone:</p>
+
+    <div>
+      <input type="radio" id="huey" name="drone" value="huey" checked />
+      <label for="huey">Huey</label>
+    </div>
+
+    <div>
+      <input type="radio" id="dewey" name="drone" value="dewey" />
+      <label for="dewey">Dewey</label>
+    </div>
+
+    <div>
+      <input type="radio" id="louie" name="drone" value="louie" />
+      <label for="louie">Louie</label>
+    </div>
+
+    <!-- <form onSubmit={this.handleSubmit}>
+        <label>
+          Name:
+          <input type="text" value={this.state.value} onChange={this.handleChange} />
+        </label>
+        <input type="submit" value="Submit" />
+      </form> this for react-->
+
+    <form action="/action_page.php">
+      <label for="fname">First name:</label><br />
+      <input type="text" id="fname" name="fname" value="John" /><br />
+      <label for="lname">Last name:</label><br />
+      <input type="text" id="lname" name="lname" value="Doe" /><br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+
+  <style>
+    div:first-of-type {
+      height: 200px;
+      width: 200px;
+      border: 1px solid black;
+      position: relative;
+    }
+
+    .square > div:nth-of-type(1) {
+      border-radius: 50%;
+      height: 100%;
+      width: 100%;
+      border: 1px solid black;
+    }
+
+    .triangle {
+      width: 0;
+      height: 0;
+      border-left: 25px solid transparent;
+      border-right: 25px solid transparent;
+      border-bottom: 50px solid #555;
+    }
+    .center-flex {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 500px;
+    }
+    .grid {
+      display: grid;
+      place-items: center;
+      color: green;
+      font-size: 25px;
+      height: 500px;
+    }
+  </style>
+</html>

@@ -11,6 +11,7 @@ const longestSubsetWithoutRepeating = (s) => {
       console.log("i=", i);
       result.clear();
     }
+
     if (maxLen < result.size) {
       maxLen = result.size;
     }

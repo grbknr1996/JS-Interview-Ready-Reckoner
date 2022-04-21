@@ -1,0 +1,92 @@
+<!--
+    Hyper text Markup language
+
+    Tags -its an annotation for content in html
+    example : <p>hello!</p>
+
+    Empty tags(self closing): the tags that dont have closing tag . 
+    like:<hr> or u could also use <hr/>
+
+    Attriutes: Attributes are a way for us to pass extra data to tags that will change
+    the browser behaviour for that tag.
+    ex: <input type="checkbox"/>
+
+    <!DOCTYPE html></html>
+    -Its used to tell to use html5 to browsser
+
+    Semantic html:HTML loses its semantic meaning when tags are misused,or generic
+    tags like <div> or <span>
+    Semantic HTML includes the usage of semantic grouping of tags which give meaning to different
+    sections of the page
+
+    <article>-self contained independly distributable
+    <section>-thematic grouping of content
+    <header>-introductory content
+    <main>-main content
+    <nav>-A section of links, often times for the primary navigation of page
+    <aside>-Non vital content outside of main content
+    <footer>-footer of page
+
+-->
+<!---
+Semantic html example
+--->
+
+<header>
+  <h1>This is the main heading of the page.</h1>
+</header>
+
+<main>
+  <h2>This is the main section of the page.</h2>
+</main>
+
+<footer>
+  <h2>This is a page footer.</h2>
+</footer>
+
+<!---
+Document Object Model:
+
+HTML      :---          DOM
+(TEXT)    (BROWSER)
+
+html is converted to a tree data structure each html element
+in the document is a node in the DOM Tree with nested content
+respresentedas  children in the tree
+--->
+
+<!---
+Accessibility -Building Applications that are usable for as many people as possible
+
+Accessibility tree: A tree representation of the page focusing on information specific to accessibilty
+                    .Each node in this tree contains information such as the role,state,name and description
+
+HTML ->      DOM        -> UI ->USER
+              |                   /\
+              \/                   |
+    ACESSIBILITY-TREE->ASSISTIVE TECH.
+
+Writing accessible HTML:
+*Use descriptive content,labels,alt & attributes
+*Use Semantic HTML
+*Test keyboard controls
+
+WAI-ARIA: it is a accessibility specification developed W3C.
+It means WEB ACCESSBILITY INITIATIVE -ACCESSIBLE RICH INTERNET APPLICATIONS
+It consists of:
+*Roles: What an element does
+        -Landmark Roles -ex: banner,main,navigation
+        -Structure Roles-ex:tootip,list,table
+        -Widget roles:Interactive elements ex:tav,searchbox,button
+
+*Properties:Extra meaning (ie label)
+*states:current state (ie disabled)
+--->
+
+<div role="dialog" aria-labelledby="title">
+  <h1 id="title">Dialog Heading</h1>
+  <p>
+    The aria role and label don't change the output at all visually, but this
+    dialog is more accessible now!
+  </p>
+</div>
