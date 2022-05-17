@@ -19,5 +19,5 @@ const magicNumberWithTwist = (number) => {
   return num;
 };
 
-console.log(magicNumberWithTwist(1234));
-console.log(magicNumberWithTwist(123));
+console.log(magicNumberWithTwist(1234)); //Output-1
+console.log(magicNumberWithTwist(123)); //Output-6
