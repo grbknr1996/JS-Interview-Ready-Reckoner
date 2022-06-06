@@ -9,3 +9,28 @@
 //HTTP://GOURAB.IN WANTS TO REQUEST DATA FROM HTTPS://GOURAB.IN--THIS WAS NOT ALLOWED
 
 //BUT AFTER CORS THIS HAS BEEN MADE POSSIBLE
+
+// origin1  |  origin2
+//    preflight call
+//   app A ---> app B
+
+//FIRST CALL A TO B --PREFLIGHT CALL
+//IF THE  PREFLIGHT CALL FROM A TO B IS SUCCESSFULL
+//THEN B WILL SEND ADDITIONAL HTTPS HEADERS
+//IN ITS OPTIONS CALL
+
+//   app A <--- app B
+//    OPTIONS CALL(EITH ADD. HEADERS)
+//THEN THE ACTUAL POST CALL WILL BE MADE ALONG WITH THE POST REQUEST
+
+//   app A ---> app B
+//   POST WITH ADD. HEADERS
+
+//MAJOR ADDITIONAL HEADERS
+//accept-control-allow-origin:*
+
+//there are two types request :
+//1.preflight request
+//2.simple request
+
+//to resolve cors errors we can add those https headers as options
