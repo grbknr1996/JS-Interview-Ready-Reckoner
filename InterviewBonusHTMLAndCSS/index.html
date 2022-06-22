@@ -103,3 +103,27 @@
     }
   </style>
 </html>
+<!-- 
+  BEM stands for Block Element Modifier.It is a popular naming convention in css
+  1. Block:The outermost parent element of the component is defined as the block
+  
+  2.Element: Inside of the component may be one or more children called elements
+
+  3.Modifier: Either a block or element may a variabtion signified by a modifier
+
+  Eg.
+  <figure class="photo">
+    <img class ="photo__img" src="./new.png"/>
+    <figcaption class="photo__Caption">LOOK AT ME!</figcaption>
+  </figure>
+ -->
+<script>
+  for (let i = 0; i < 5; i++) {
+    var btn = document.createElement("button");
+    btn.appendChild(document.createTextNode("Button " + i));
+    btn.addEventListener("click", function () {
+      console.log(i);
+    });
+    document.body.appendChild(btn);
+  }
+</script>

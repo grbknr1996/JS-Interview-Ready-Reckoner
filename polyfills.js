@@ -68,3 +68,22 @@ Function.prototype.mybind = function (...args) {
 
 let printMyName3 = printMyName2.mybind(name, "dehradun", "s");
 printMyName3();
+/**
+ *
+ *Call polyfill
+ */
+Function.prototype.myCall = function (thisContext, ...args) {
+  const symbol = Symbol();
+  thisContext[symbol] = this;
+  const returnValue = thisContext[symbol](...args);
+  delete thisContext[symbol];
+  return returnValue;
+};
+
+Function.prototype.myApply = function (thisContext, args = []) {
+  return this.myCall(thisContext, ...args);
+};
+
+Function.prototype.myBind = function (thisContext, ...args) {
+  return (...newArgs) => this.myApply(thisContext, [...newArgs, ...args]);
+};
