@@ -65,4 +65,4 @@ document.getElementById("child").addEventListener(
 let foo; //undefined
 const bar = null; //null
 console.log(foo == bar); //true //double equals checks for equality--true
-console.log(foo === bar); //false//=== checks for both quality and type
+console.log(foo === bar); //false//=== checks for both equality and type

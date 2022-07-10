@@ -1,2 +1,24 @@
-! then hit enter to generate html stud template in vscode
+! then hit enter to generate html stub template in vscode
+
+//sfc
+const  = () => {
+  return (  );
+}
+ 
+export default ;
+
+//hoc
+function () {
+  return class extends Component {
+    constructor(props) {
+      super(props);
+    }
+ 
+    render() {
+      return < {...this.props} />
+    }
+  }
+}
+
+
 
