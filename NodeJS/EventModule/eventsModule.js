@@ -47,5 +47,5 @@ event2.emit("checkPage", 200, "ok");
 sayMyName is fired!
 sayMyName is fired!!
 sayMyName is fired!!!
-status code is 200 and the page is ok
+status code is 200 and the page is ok 
 */
