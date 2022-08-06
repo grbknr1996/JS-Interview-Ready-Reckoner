@@ -84,3 +84,50 @@ It runs all the tasks in parallel,
 but as soon as any of the function completes
 its execution or passes an error to its callback,
 the main callback is immediately called.
+
+## async.queue(task, concurrency)
+
+When we need to run a set of tasks asynchronously, a queue can be used.
+A queue object based on an asynchronous function can be created which is passed as a worker.
+
+Task: Here, it takes two parameters, first — the task to be performed and second — the callback function.
+
+Concurrency: It is the number of functions to be run in parallel.
+
+async.queue returns a queue object that supports few properties:
+
+Push: Adds tasks to the queue to be processed.
+Drain: The drain function is called after the last task of the queue.
+Unshift: Adds tasks in front of the queue.
+
+```js
+// create a queue object with concurrency 2
+var q = async.queue(function (task, callback) {
+  console.log("Hello " + task.name);
+  callback();
+}, 2);
+
+// assign a callback
+q.drain = function () {
+  console.log("All items have been processed");
+};
+
+// add some items to the queue
+q.push({ name: "foo" }, function (err) {
+  console.log("Finished processing foo");
+});
+
+q.push({ name: "bar" }, function (err) {
+  console.log("Finished processing bar");
+});
+
+// add some items to the queue (batch-wise)
+q.push([{ name: "baz" }, { name: "bay" }, { name: "bax" }], function (err) {
+  console.log("Finished processing item");
+});
+
+// add some items to the front of the queue
+q.unshift({ name: "bar" }, function (err) {
+  console.log("Finished processing bar");
+});
+```
