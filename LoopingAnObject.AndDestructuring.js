@@ -18,7 +18,7 @@ for (var key in p) {
   }
 }
 
-//3rd Way entries()
+//3rd Way  ()
 for (const [key, value] of Object.entries(obj)) {
   console.log(key, value);
 }

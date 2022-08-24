@@ -93,6 +93,41 @@ console.log(myMap([1, 2, 3, 4, 5, 6, 7, 8], (v) => (v * 10).toString()));
 //output
 //["10", "20", "30", "40", "50", "60", "70", "80"];
 
+//The keyword extends can be used for interfaces and classes only.
+
+/* 
+  For any type T, keyof T is the union of known, public property names of T.
+
+Example:
+*/
+interface Person123 {
+  age: number;
+  name: string;
+}
+
+type PersonKeys = keyof Person123; // "age" | "name"
+/*
+extends keyof
+extends, in this case, is used to constrain the type of a generic parameter. Example:
+
+<T, K extends keyof T>
+
+K can therefore only be a public property name of T. 
+It has nothing to do with extending a type or inheritance, contrary to extending interfaces.
+*/
+function getProperty<T, K extends keyof T>(obj: T, key: K): T[K] {
+  return obj[key];
+}
+
+const person22: Person123 = {
+  age: 22,
+  name: "ano",
+};
+
+// name is a property of person
+// --> no error
+const name2 = getProperty(person22, "name");
+
 //keyOf
 function pluck<DataType, KeyType extends keyof DataType>(
   items: DataType[],
