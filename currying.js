@@ -35,3 +35,12 @@ close(5);
 // Arity (from Latin) is the term used to refer
 // to the number of arguments or operands in a function
 // or operation
+const sum = function (x) {
+  return function (y) {
+    if (y) {
+      return sum(x + y);
+    } else {
+      return x;
+    }
+  };
+};

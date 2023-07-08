@@ -63,6 +63,15 @@ console.log("after the loop");
 // i=2 f(c:i(2)-->i(3))
 // i=3 f(c:i(3))
 
+// With var you have a function scope, and only one shared binding for all
+// of your loop iterations - i.e. the i in every setTimeout callback means the same variable that
+// finally is equal to 6 after the loop iteration ends.
+
+// With let you have a block scope and when used in the for loop you get
+// a new binding for each iteration - i.e. the i in every setTimeout callback means a different variable,
+// each of which has a different
+// value: the first one is 0, the next one is 1 etc.
+
 // What is a Closure?
 // A closure is the combination of a function bundled
 //  together (enclosed) with references to its

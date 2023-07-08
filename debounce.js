@@ -30,3 +30,57 @@ const printStar = (num) => {
 };
 
 printStar(5);
+
+import "./styles.css";
+
+/*
+q1. Create a button UI AND ADD DEBOUNCE AS FOLLOWS
+--> SHOW BUTTON PRESSED <X> TIMES EVERY BUTTON IS PRESSED
+-->INCREASE TRIGERRED Y TIMES COUNT AFTER 800 MS OF DEBOUNCE
+*/
+const btn = document.querySelector(".increment_btn");
+const btnPress = document.querySelector(".increment_pressed");
+const count = document.querySelector(".increment_count");
+
+var triggerCount = 0;
+var pressedCount = 0;
+
+const myDebounce = (cb, d) => {
+  let timer = 0;
+  return function (...args) {
+    if (timer) clearTimeout(timer);
+    timer = setTimeout(() => {
+      cb(...args);
+    }, d);
+  };
+};
+
+const myThrottle = (cb, d) => {
+  let last = 0;
+
+  return function (...args) {
+    let now = new Date().getTime();
+    console.log(now - last);
+    if (now - last < d) return;
+    console.log("it comes");
+    last = now;
+    return cb(...args);
+  };
+};
+
+btn.addEventListener("click", () => {
+  console.log("click");
+  btnPress.innerHTML = ++pressedCount;
+  //debounceCount();
+  throttled();
+});
+
+const debounceCount = myDebounce(() => {
+  triggerCount += 1;
+  count.innerHTML = ++triggerCount;
+}, 800);
+
+const throttled = myThrottle(() => {
+  ++triggerCount;
+  count.innerHTML = triggerCount;
+}, 1000);

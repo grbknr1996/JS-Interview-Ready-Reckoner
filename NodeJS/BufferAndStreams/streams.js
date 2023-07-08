@@ -8,7 +8,7 @@ instead of downloading a file to your computer and watching it later.
 
 Types of streams:
 
-1.Readable: Strams whic is used for read operation
+1.Readable: Strams which is used for read operation
 
 2.Writable : Stream which is used for write operation
 
