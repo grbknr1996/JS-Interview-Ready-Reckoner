@@ -1,0 +1,63 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.game-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 10px;
+  row-gap: 10px;
+  margin-bottom: 10px;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+
+.cell:nth-child(odd) {
+  background-color: lightgreen;
+}
+
+.cell:nth-child(even) {
+  background-color: green;
+}
+
+.reset {
+  margin-top: 20px;
+  font-size: 20px;
+  border: 0;
+  border-radius: 5px;
+  height: 30px;
+  background-color: lightgreen;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.won {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.cell-withX::before {
+  content: "\2716";
+  font-size: 50px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cell-withO::before {
+  content: "O";
+  font-size: 50px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
