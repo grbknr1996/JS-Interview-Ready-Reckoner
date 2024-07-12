@@ -66,3 +66,23 @@ let foo; //undefined
 const bar = null; //null
 console.log(foo == bar); //true //double equals checks for equality--true
 console.log(foo === bar); //false//=== checks for both equality and type
+
+/*
+In JavaScript (assuming you are referring to JavaScript), when you create two objects like obj1 = {} and obj2 = {}, you are creating two separate objects in memory. Even though both objects might appear identical because they are empty, they are different objects with their own distinct memory addresses.
+
+So, when you compare obj1 and obj2 using the equality operator == or the strict equality operator ===, the comparison evaluates to false because these operators compare object references, not the content of the objects.
+
+For example:
+
+javascript
+Copy code
+const obj1 = {};
+const obj2 = {};
+
+console.log(obj1 === obj2); // false
+console.log(obj1 == obj2);  // false
+In this case, obj1 and obj2 are two separate objects, and comparing them using == or === will 
+result in false because they have different memory addresses.
+ If you want to compare their content, you would need to manually compare the properties of the objects, 
+which may require iterating through the properties and values to check if they are the same.
+*/

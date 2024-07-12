@@ -1,0 +1,10 @@
+.progressBar {
+  width: 0;
+  height: 10px;
+  background: green;
+  margin: 10px 0;
+}
+
+.transition {
+  width: 100%;
+}
